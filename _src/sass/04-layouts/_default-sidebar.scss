@@ -1,0 +1,28 @@
+/* Default Sidebar Layout
+   ========================================================================== */
+
+/* ====== Header ====== */
+
+header {
+    @include span(3 of 12);
+}
+
+/* ====== Main ====== */
+
+main {
+    @include span(9 of 12);
+    @include last;
+}
+
+/* ====== Main ====== */
+
+aside {
+    @include span(3 of 12);
+    @include last;
+}
+
+/* ====== Footer ====== */
+
+footer {
+    @include span(12 of 12);
+}

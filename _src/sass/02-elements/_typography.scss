@@ -1,0 +1,115 @@
+/* Typography
+   ========================================================================== */
+
+/* ====== Base ====== */
+
+html {
+    @include rem(font-size, 16px);
+}
+
+body {
+    color: $base-font-color;
+    font-family: $base-font-family;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-font-color;
+    font-family: $heading-font-family;
+    margin: 0;
+}
+
+h1 {
+    @include rem(font-size, 40px);
+}
+
+h2 {
+    @include rem(font-size, 30px);
+}
+
+h3 {
+    @include rem(font-size, 25px);
+}
+
+h4 {
+    @include rem(font-size, 20px);
+}
+
+h5 {
+    @include rem(font-size, 18px);
+}
+
+h6 {
+    @include rem(font-size, 16px);
+}
+
+p {
+    @include rem(margin, 0 0 30px 0);
+    @include rem(line-height, 24px);
+}
+
+a {
+    color: $base-link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $base-link-hover-color;
+    }
+}
+
+blockquote {
+    @include rem(margin, 0 0 30px 0);
+
+    cite {
+        font-style: normal;
+    }
+}
+
+/* ====== Responsive Font Global Settings ====== */
+
+@media screen and (max-width: 500px){
+    html{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 501px){
+    html{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    html{
+        font-size: 13.5px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    html{
+        font-size: 14.5px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    html{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    html{
+        font-size: 16px;
+    }
+}

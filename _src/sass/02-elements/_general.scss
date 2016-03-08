@@ -1,0 +1,87 @@
+/* General
+   ========================================================================== */
+
+/* ====== Global Settings ====== */
+
+body {
+    background-color: $base-bg-color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ====== Text Highlight Color ====== */
+
+::selection {
+    background: #e96a2e;
+}
+
+::-moz-selection {
+    background: #e96a2e;
+}
+
+/* ====== Show / Hide Devices  ====== */
+
+
+/* Usage: Show element on mobile */
+
+.show-mobile {
+    display: none;
+
+    @include breakpoint($mobile) {
+        display: block;
+    }
+}
+
+/* Usage: Hide element on mobile */
+
+.hide-mobile {
+    display: block;
+
+    @include breakpoint($mobile) {
+        display: none;
+    }
+}
+
+/* Usage: Show element on tablet */
+
+.show-tablet {
+    display: none;
+
+    @include breakpoint($tablet) {
+        display: block;
+    }
+}
+
+/* Usage: Hide element on tablet */
+
+.hide-tablet {
+    display: block;
+
+    @include breakpoint($tablet) {
+        display: none;
+    }
+}
+
+/* Usage: Show element on desktop */
+
+.show-desktop {
+    display: none;
+
+    @include breakpoint($desktop) {
+        display: block;
+    }
+}
+
+/* Usage: Hide element on desktop */
+
+.hide-desktop {
+    display: block;
+
+    @include breakpoint($desktop) {
+        display: none;
+    }
+}

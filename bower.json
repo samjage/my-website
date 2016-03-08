@@ -1,0 +1,21 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "authors": [
+    "dell@donatoni.io"
+  ],
+  "description": "Third Party libraries bower managed",
+  "license": "MIT",
+  "homepage": "http://delatoni.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "sass-susy": "susy#latest",
+    "compass-breakpoint": "compass-breakpoint#latest",
+    "Font-Awesome": "Font-Awesome#latest"
+  }
+}

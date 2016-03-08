@@ -1,0 +1,54 @@
+/* Grid
+   ========================================================================== */
+
+/* ====== Susy Settings ====== */
+
+/* Master Grid Settings */
+
+$susy: (
+    flow: ltr,
+    math: fluid,
+    output: float,
+    gutter-position: after,
+    container: 1020px,
+    container-position: center,
+    columns: 12,
+    gutters: .3,
+    column-width: false,
+    global-box-sizing: border-box,
+    last-flow: to,
+    debug: (
+        image: hide,
+        color: rgba(#66f, .25),
+        output: background,
+        toggle: top right,
+    )
+);
+
+/* ====== Breakpoint Settings ====== */
+
+// Name your breakpoints in a way that creates a ubiquitous language
+// across team members. It will improve communication between
+// stakeholders, designers, developers, and testers.
+
+/* Base Breakpoints */
+
+$mobile: max-width 640px;
+$tablet: max-width 768px;
+$desktop: max-width 1020px;
+
+/* Custom Breakpoints */
+
+/* ====== Container Settings ====== */
+
+.wrapper {
+    @include container;
+
+    @include rem(padding, 0 ($base-spacing / 2));
+}
+
+.wrapper-wide {
+    @include container(1230px);
+
+    @include rem(padding, 0 ($base-spacing / 2));
+}

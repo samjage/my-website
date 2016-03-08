@@ -1,0 +1,48 @@
+/* Lists
+   ========================================================================== */
+
+/* ====== Default ====== */
+
+ul {
+    list-style-type: disc;
+    @include rem(margin, 0 0 30px 0);
+    @include rem(padding-left, 40px);
+
+    &.is-inline{
+        > li {
+            display:inline-block;
+        }
+    }
+}
+
+ol {
+    list-style-type: decimal;
+    @include rem(margin, 0 0 30px 0);
+    @include rem(padding-left, 40px);
+}
+
+/* ====== Variations ====== */
+
+ul {
+
+    &.no-bullet{
+        list-style:none;
+    }
+
+    &.ul-flush {
+        @include rem(padding-left, 20px);
+    }
+
+    &.ul-blank {
+        list-style-type: none;
+        padding-left: 0;
+    }
+}
+
+
+ol {
+
+    &.ol-flush {
+        @include rem(padding-left, 22px);
+    }
+}

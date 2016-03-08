@@ -1,0 +1,57 @@
+/* Header
+   ========================================================================== */
+
+header {
+    @include rem(padding, 20px 0);
+
+    .header__left {
+
+    }
+
+    .logo {
+        color: $font-black;
+        @include rem(font-size, 50px);
+        font-family: $font-bold;
+        text-transform: uppercase;
+    }
+
+    .header__right {
+        text-align: right;
+    }
+
+    .main-nav {
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                @include rem(padding-left, ($base-spacing / 2));
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                a {
+                    color: $font-black;
+                    font-family: $font-semi-bold;
+                    text-transform: uppercase;
+                    @include rem(line-height, 63px);
+
+                    &:hover {
+                        @include rem(padding-bottom, 4px);
+                        border-bottom: 1px solid #000;
+                    }
+                }
+            }
+        }
+    }
+
+    #mobile-toggle {
+        color: $font-black;
+        @include rem(font-size, 32px);
+        @include rem(line-height, 63px);
+    }
+}

@@ -1,0 +1,23 @@
+/* Default Layout
+   ========================================================================== */
+
+/* ====== Header ====== */
+
+header {
+    @include span(12 of 12);
+
+    .header__left {
+        @include span(6 of 12);
+    }
+
+    .header__right {
+        @include span(6 of 12);
+        @include last;
+    }
+}
+
+/* ====== Footer ====== */
+
+footer {
+    @include span(12 of 12);
+}

@@ -1,0 +1,70 @@
+/* Mixins
+   ========================================================================== */
+
+/* ====== Retina Images ====== */
+
+@mixin background-image-retina($file, $type, $width, $height) {
+    background-image: url($base-image-path + $file + '.' + $type);
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (-moz-min-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx){
+        & {
+            background-image: url($base-image-path + $file + '@2x.' + $type);
+            -webkit-background-size: $width $height;
+            -moz-background-size: $width $height;
+            -o-background-size: $width $height;
+            background-size: $width $height;
+        }
+    }
+}
+
+/* ====== General PX to EM Converter ====== */
+
+/*
+Example usage...
+
+@include rem(font-size, 16px);
+@include rem(margin, 0 0 30px);
+
+Which would generate the rem and px version as a fallback for IE 8 and so on.
+*/
+
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+    $px: ();
+    $rem: ();
+
+    @each $value in $values {
+
+        @if $value == 0 or $value == auto or unit($value) == "%" {
+            $px: append($px, $value);
+            $rem: append($rem, $value);
+        } @else {
+            $unit: unit($value);
+            $val: parseInt($value);
+
+            @if $unit == "px" {
+                $px: append($px, $value);
+                $rem: append($rem, ($val / 16 + rem));
+            }
+
+            @if $unit == "rem" {
+                $px: append($px, ($val * 16 + px));
+                $rem: append($rem, $value);
+            }
+        }
+    }
+
+    @if $px == $rem {
+        #{$property}: $px;
+    } @else {
+        #{$property}: $px;
+        #{$property}: $rem;
+    }
+}

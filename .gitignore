@@ -1,0 +1,6 @@
+/_dist
+/node_modules
+/sassdoc
+/vendor
+.DS_Store
+npm-debug.log
